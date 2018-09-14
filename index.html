@@ -55,12 +55,14 @@
         <div class="head-dashboard">Dashboard
           <form class="search-box">
             <input type="text" name="search">
+            <img src="img/search.png" alt="Search icon" />
           </form>
             <style>
               input[type=text], select {
-              width: 30%;
+              width: 300px;
               padding: 12px 20px;
-              margin: 8px 0;
+              margin-right: 20px;
+              margin-top: 17px;
               display: inline-block;
               border: 1px solid #ccc;
               border-radius: 4px;
@@ -82,23 +84,41 @@
             <div class="tasks">
               <div class="task-one">
                 Tasks
-                <img src="img/icon_settings.jpg" alt="Icon Settings">
+                <img class="task-icon-setting" src="img/icon_settings.jpg" alt="Icon Settings">
               </div>
               <div class="task-two">
-                  <img src="img/ellipse.png" alt="Ellipse">
-                  Welcome Contacts
+                <div class="circle-one"><p>1</p></div>
+                <p id="circlonetext">Welcome Contacts</p>
+                <div class="blueavatar-wrapper">
+                  <div class="content">
+                    <figure class="blueavatar">
+                      <img src="img/smallblueavatar.png">32
+                    </figure>
+                  </div>
+                </div>
               </div>
               <div class="task-three">
-                <img src="img/ellipse.png" alt="Ellipse">
+                <div class="circle-two"><p>2</p></div>
                 Provide Responses
+                <div class="blueavatar-wrapper">
+                  <figure class="blueavatar">
+                    <img src="img/smallblueavatar.png"><br />36
+                  </figure>
+                </div>
               </div>
               <div class="task-four">
-                <img src="img/ellipse.png" alt="Ellipse">
+                <div class="circle-three"><p>3</p></div>
                 Review Activity
+                <figure class="blueavatar">
+                  <img src="img/smallblueavatar.png">36
+                </figure>
               </div>
               <div class="task-five">
-                <img src="img/ellipse.png" alt="Ellipse">
+                <div class="circle-four"><p>4</p></div>
                 Reach Out
+                <figure class="blueavatar">
+                  <img src="img/smallblueavatar.png">3
+                </figure>
               </div>
             </div>
             <div class="recommendations">Recommendations
@@ -106,30 +126,38 @@
           </div>
 
             <div class="analytics">Analytics
-              <img src="img/bargraph.png" alt="Bar Graph"/>
+              <img class="bar-graph" src="img/bargraph.png" alt="Bar Graph"/>
+                <img class ="pie-graphs pietop" src="img/piecharttop.png" alt="Pie Chart"/>
+                  <img class ="pie-graphs piebottom" src="img/piechartbottom.png" alt="Pie Chart"/>
             </div>
             <div class="contacts-box">
-              <img class="left-ribbon" src="img/leftribbon.png" alt="Left Ribbon">
-              <div class="square-one">
-                <img class="green-avatar" src="img/greenavatar.png" alt="Green Avatar" />
-                <div class="blue-box">
-                  <div class="contact-one">75 Contacts </div>
-                  <div class="contact-two">4 Influencers</div>
+              <!--<div class="contacts-grayscaleone">-->
+                <img class="greenavatar" src="img/greenavatar.png" alt="Green Avatar" />
+                <img class="left-ribbon" src="img/leftribbon.png" alt="Left Ribbon">
+                  <div class="square-one">
+                    <!--<img class="green-avatar" src="img/greenavatar.png" alt="Green Avatar" />-->
+                    <div class="blue-box">
+                      <div class="contact-one">75 Contacts </div>
+                      <div class="contact-two">4 Influencers</div>
+                    </div>
+                    <img class="green-chart" src="img/chart-green.png" alt="Green chart" />
                 </div>
-                <img class="green-chart" src="img/chart-green.png" alt="Green chart" />
+            <img class="right-ribbon" src="img/rightribbon.png" alt="Right Ribbon">
+            <!--</div>-->
+              <!--<div class="contacts-grayscaletwo">-->
+                <img class="orangeavatar" src="img/orangeavatar.png" alt="Orange Avatar" />
+                <img class="left-ribbon" src="img/leftribbon.png" alt="Left Ribbon">
+                  <div class="square-two">
+                    <div class="blue-box">
+                      <div class="contact-one">17 Customers </div>
+                      <div class="contact-two">0 Influencers</div>
+                    </div>
+                      <img class="orange-chart" src="img/chart-orange.png" alt="Orange chart" />
               </div>
-              <img class="right-ribbon" src="img/rightribbon.png" alt="Right Ribbon">
-              <img class="left-ribbon" src="img/leftribbon.png" alt="Left Ribbon">
-              <div class="square-two">
-                <div class="blue-box">
-                  <div class="contact-one">17 Customers </div>
-                  <div class="contact-two">0 Influencers</div>
-                </div>
-                    <img class="orange-chart" src="img/chart-orange.png" alt="Orange chart" />
-              </div>
-              <img class="right-ribbon" src="img/rightribbon.png" alt="Right Ribbon">
-
+                <img class="right-ribbon" src="img/rightribbon.png" alt="Right Ribbon">
+            <!--  </div>-->
             </div>
+
             <div class="did-you-know">
               <div class="rectangle">
                 <div class="left-circle">
@@ -146,9 +174,15 @@
           </div>
 
         <div class="banner">
-          <img class="left-bitmap" class="banner-photos" src="img/bitmapgreen.jpg" alt="Green Bitmap">
-          <img class="center-bitmap" class="banner-photos" src="img/bitmap.png" alt="People Bitmap">
-          <img class="right-bitmap" class="banner-photos" src="img/compositepath.jpg" alt="Composite Bitmap">
+            <div class="white-box">
+              <img class="left-bitmap banner-photos" src="img/bitmapgreen.jpg" alt="Green Bitmap">
+            </div>
+            <div class="white-box">
+              <img class="center-bitmap banner-photos" src="img/bitmap.png" alt="People Bitmap">
+            </div>
+            <div class="white-box">
+              <img class="right-bitmap banner-photos" src="img/compositepath.jpg" alt="Composite Bitmap">
+            </div>
          </div>
         <div class="footer">FOOTER</div>
 
