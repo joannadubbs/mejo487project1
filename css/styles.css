@@ -3,7 +3,7 @@
   .site{
     display:grid;
     grid-template-columns: repeat (10, 1fr);
-    grid-template-rows:40px 100px 20px 80px 20px 40px 378.4px 285.4px 163.2px 275px 25px; /* header navbar grid gap dashboard grid gap announcements main banner grid gap footer */
+    grid-template-rows:40px 100px 20px 80px 20px 40px 378.4px 285.4px 163.2px 275px 45px; /* header navbar grid gap dashboard grid gap announcements main banner grid gap footer */
     grid-template-areas:
       'hd hd hd hd hd hd hd hd hd hd' /*header goes full length across*/
       'nv nv nv nv nv nv nv nv nv nv' /*nav goes full length across*/
@@ -19,20 +19,37 @@
 
 }
 
+/*Header Styling*/
 .header{
   grid-area: hd;
   display:flex;
+  flex-wrap:wrap;
   flex-direction: row;
+  justify-content: space-between;
   background-color: #2190e8;
   padding-left: 85px;
   padding-top: 7px;
   color: white;
 	font-family: 'proxima-nova', sans-serif;
+  padding-right: 140px;
 
 }
 
+/*Styling Left Side of Header*/
+
+.left-header{
+  font-size: 20px;
+}
+
+/*Styling Links in the Header*/
+
 .link-header{
   justify-content: flex-end;
+  font-size: 14px;
+  margin-top: 10px;
+  padding-right: 10px;
+  padding-left: auto;
+  border-right: solid #1C85D8 1px;
 }
 
 .link-header:link{
@@ -55,6 +72,8 @@
   text-decoration: none;
 }
 
+/*Adds Shadow*/
+
 .icon-shadow{
   display:flex;
   justify-content: space-around;
@@ -62,9 +81,13 @@
   padding-left: 10px;
 }
 
+/*Adds Spacer*/
+
 .icon-spacer{
   justify-content: flex-end;
 }
+
+/*Navbar Styling*/
 
 .navbar{
   grid-area: nv;
@@ -75,6 +98,8 @@
   flex-wrap: wrap;
 
 }
+
+/*Navbar Icon Styling*/
 
 .navbar-icons {
   display: flex;
@@ -88,6 +113,8 @@
   background-image: url(../img/icon-shadow.png);
   padding-top: 30px;
 }
+
+/*Adds Shadows below Icons in Navbar*/
 
 .shadows{
   display: flex;
@@ -104,6 +131,7 @@
   align-items: center;
 }
 
+/*Grid gap*/
 .white-space{
   grid-area: wh;
   display:flex;
@@ -111,9 +139,11 @@
   align-items: center;
 }
 
+/*Head Dashboard Styling*/
 .head-dashboard{
   grid-area: dash;
   display: flex;
+  flex-wrap:wrap;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
@@ -128,11 +158,15 @@
 
 }
 
+/*Search Box Styling*/
+
 .search-box{
   align-items: right;
   length: 50px;
   border-radius: 10px;
 }
+
+/*Magnifying Glass in Search Bar Styling*/
 
 .search-box img{
   z-index:1;
@@ -143,25 +177,30 @@
 
 }
 
+/*Text Styling*/
 .task-one, .recommendations, .analytics{
   color: #319DF4;
   font-size: 30px;
   font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/*Announcements Section Styling*/
+
 .announcements{
   grid-area: ann;
   outline-style: solid;
-  outline-color: gray;
-  outline-width: 2px;
+  outline-color: #EEEEEE;
+  outline-width: 1px;
   display:grid;
   font-family: "Myriad Pro";
 
 }
 
+/*Styles Far Left of Announcements Row*/
+
 .announcements-left{
   grid-column: 1/4;
-  border-right: 2px solid gray;
+  border-right: 1px solid #EEEEEE;
   font-family: "Myriad Pro";
   color: #FE9F5D;
   text-align: center;
@@ -170,9 +209,11 @@
   font-size: 12px;
 }
 
+/*Styles Center of Announcements Row*/
+
 .announcements-middle{
   grid-column: 4/14;
-  border-right: 2px solid gray;
+  border-right: 1px solid #EEEEEE;
   color: #909090;
   text-align: center;
   padding-top: 12px;
@@ -180,8 +221,21 @@
 
 }
 
+/*Styles Far Right of Announcements Row*/
+
 .announcements-right{
   grid-column: 14/16;
+  display: flex;
+  justify-content: center;
+
+}
+
+/*Styles Announcements Icon*/
+
+.announcements-icon{
+  height:50%;
+  width:20%;
+  margin-top: 10px;
 }
 
 .icon-customersactive, .icon-dashboardactive, .icon-messagesactive,
@@ -189,30 +243,23 @@
   padding-left: 45px;
 }
 
-/*.main{
-  grid-column:2/9;
-  background-color:white;
-  outline-style: solid;
-  outline-color: #E9E9E9;
-  grid-row: 6/7;
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-}*/
+
+/*Styles Left Column of Main Section of Site*/
 
 .left-main{
   grid-area: left;
   display: flex;
   flex-direction: column;
   background-color:white;
-  border-right: 2px solid gray;
-  border-left: 2px solid gray;
-  border-top: 2px solid gray;
+  border-right: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+  border-top: 1px solid #EEEEEE;
   display:grid;
   grid-template-columns: 1fr;
   grid-template-rows: 300px 500px;
 }
 
-/*tasks section*/
+/*Tasks section*/
 .tasks{
   display: flex;
   justify-content: space-around;
@@ -253,47 +300,49 @@
 
 /*task item styling */
 .task-two, .task-three, .task-four, .task-five{
-     border-bottom: 2px solid gray; /*adds bottom border to task items*/
-     padding-bottom: 10px;
+     border-bottom: 1px solid #EEEEEE; /*adds bottom border to task items*/
+     margin: 0px 5px 0px 0px;
      color: #319DF4;
      display: flex;
-     flex-direction: row;
      justify-content: space-between;
+     align-items: flex-start;
+     flex-flow: row nowrap;
+     height: 100%;
+     /*flex-direction: row;*/
      font-size: 20px;
      font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
+/*Task Header Styling*/
+
   .task-one{
-    display:flex;
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
+    flex-flow: row nowrap;
+    height: 60%;
+    margin-top: 7px;
+    margin-right: 10px;
+    margin-bottom: 0px;
 
   }
 
+/*Task Settings Icon*/
   .task-icon-setting{
-    justify-content: flex-end;
-    width: 7%;
-    height:8%;
-    margin-top: 2%;
-    margin-right: 2%;
+    width:20px;
+    height:22px;
+    order:2;
+
   }
 
+/*Blue Avatar Button in Tasks Section*/
   .blueavatar{
     position:relative;
-    margin-right:-20px;
+    border:1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 3px 3px 3px 3px;
     justify-content: flex-end;
 
   }
-
-.blueavatar-wrapper{
-    border: 1px solid grey;
-    border-radius: 6px;
-    width:15%;
-    height:4%;
-    justify-content: flex-end;
-    margin-top: 7%;
-
-}
 
   /*numbered circles in tasks*/
   .circle-one, .circle-two, .circle-three, .circle-four {
@@ -303,8 +352,11 @@
       height: 1.2em;
       width: 1.2em;
       text-align: center;
+      margin-top: 13px;
+      margin-left: 5px;
   }
 
+  /*Green Circle Icons in Tasks*/
   .circle-one p , .circle-two p, .circle-three p, .circle-four p {
   	margin-top: 0.2em;
       font-size: 0.8em;
@@ -313,37 +365,379 @@
       color: white;
   }
 
-  #circlonetext{
-    display:inline-block;
-  }
+  /*End of Tasks Section*/
 
+
+/* Recommendations Section Styling*/
 .recommendations{
   display:flex;
+  flex-flow:column nowrap;
 }
+
+/*Recommendation Header Styling*/
+.rec-head{
+margin-top: 17px;
+margin-left: 14px;
+margin-bottom: -2px;
+}
+
+/*Reccommendation Section Row Styling*/
+.rec-box{
+     border-bottom: 1px dotted #EEEEEE;
+     margin: 10px 5px 0px 0px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     flex-flow: row wrap;
+     font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+/*Icon Styling in Recommendation Section*/
+.rec-img{
+margin-top: 10px;
+margin-right: 2px;
+}
+
+/*Reccommendation Hover Styling*/
+.rec-box:hover .rec-img{
+  transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+}
+
+.rec-box:hover .rec-alltext{
+  color:black;
+}
+
+.rec-box:hover {
+  .rec-img{
+  transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+  }
+  .rec-alltext{
+    color:black;
+  }
+}
+
+/*Styling for Top Text in Recommendations Section*/
+.rec-top-text{
+font-size: 12px;
+color:gray;
+}
+
+/*Styling for Bottom Text in Recommendations Section*/
+.rec-bot-text{
+  font-size: 18px;
+  color:gray;
+  margin-top: -10px;
+}
+
+/*Creates a Nested Grid in the Analytics Section*/
 
 .analytics{
-  grid-area: ana;
-  display:flex;
-  border-right: 2px solid gray;
-  border-bottom: 2px solid gray;
+  grid-area:ana;
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  display:grid;
+  grid-template-columns: repeat (9, 1fr);
+  grid-template-rows: 16.5% 10.5% 50.2% 22.8%; /* header navbar grid gap dashboard grid gap announcements main banner grid gap footer */
+  grid-template-areas:
+    'anhd anhd anhd anhd anhd anhd anhd anhd anhd'
+    'anact anact anact anact anact anact anact pie pie'
+    'bar bar bar bar bar bar bar pie pie'
+    'spr spr spr spr spr spr spr spr spr'
+
 }
 
-.bar-graph {
-  width: 47%;
-  height: 70%;
-  top:30px;
+/*Analytics Header Styling*/
+
+.analytics-header{
+  grid-area:anhd;
+  margin: 20px 0px 10px 80px;
 }
+
+/*Analytics Sub-header styling*/
+
+.analytics-activity{
+  grid-area:anact;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*Positions the bar graph in the analytics section*/
+
+.analytics-bargraph{
+  grid-area:bar;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-left: -50px;
+}
+
+/*Positions the pie charts to stack on top of each other on the right*/
+
+.analytics-piechart{
+  grid-area:pie;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-left: 1px solid #EEEEEE;
+}
+
+/*Sets Checkboxes for analytics section---> This code is a modified version from code written in an article from the following source: Medium.com --> "Pure CSS: Accessible Checkboxes and Radio Buttons" by Aditya Bhandari"*/
+
+.analytics-sprites{
+  grid-area: spr;
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+}
+
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+}
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+    padding-left: 22px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+    content: "";
+
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before{
+    height: 16px;
+    width: 16px;
+    border-radius: 2px;
+    border: 1px solid #DDDDDD;
+    left: 0px;
+    background-color: #E5E5E5;
+
+    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+    top: 3px;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+     background: url('img/icon-checklist.png') no-repeat;
+    height: 5px;
+    width: 20px;
+    border-left: 3px solid orange;
+    border-bottom: 3px solid orange;
+
+    transform: rotate(-45deg);
+
+    left: 3px;
+    top: 2px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: white auto 5px;
+}
+
+/*End of Checkbox settings*/
+
+
+/*Facebook Icon Styling (Analytics Section)--> This creates the Facebook Icon*/
+
+.facebook-icon{
+  background-color: #114570;
+  color:white;
+  border-radius: 7px;
+  font-size: 15px;
+  margin-left: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+
+}
+
+/*Twitter Icon Styling (Analytics Section)*/
+
+.twitter-icon{
+  background-color: #2298F4;
+  color:white;
+  border-radius: 7px;
+  font-size: 15px;
+  margin-left: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+
+}
+
+/*Foursquare Icon Styling (Analytics Section)*/
+
+.foursquare-icon{
+  background-color: #3A599B;
+  color:white;
+  border-radius: 7px;
+  font-size: 15px;
+  margin-left: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+
+}
+
+/*Google Icon Styling (Analytics Section)*/
+
+.google-icon{
+  background-color: #31CC66;
+  color:white;
+  border-radius: 7px;
+  font-size: 15px;
+  margin-left: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+
+}
+
+/* Bar Graphs & Pie Charts in Analytics Section*/
+
+.act-text{
+  font-size: 13px;
+  color:#999999;
+  padding-left: 80px;
+}
+
+/*Drop down button styling*/
+
+.orangedropdown{
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.dropdowntoptext{
+    border-right: 1px solid #DDDDDD;
+}
+
+/*Styles the dropdown button*/
+.dropbtn {
+    background-color: #FFFFF;
+    color: #666666;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display:flex;
+    flex-direction: row;
+
+}
+
+/*Styles the dropdown*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+/*Sets the dropdown content to automatically hide*/
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 30px;
+}
+
+/*On hover, the dropdown content is displayed*/
+
+.dropdown-content a {
+    color: #666666;
+    padding: 10px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+/*On hover, the dropdown text changes color*/
+
+.dropdown-content a:hover {color: #2498F4;}
+
+.dropdown:hover .dropdown-content {display: block;}
+/*end drop down styling*/
+
+/*Styling & positioning for pie charts in Analytics section*/
 
 .pie-graphs{
-  width: 12%;
-  height:28%;
+  width: 50%;
+  height:80%;
+  padding-left: 15px;
+
 }
 
 .piebottom{
-  top:30px;
+margin-top:10%;
+}
+
+.piechart-text{
+  font-size: 13px;
+  color:#999999;
+  margin-left: 20px;
+}
+
+.pietoptext{
+  margin-bottom: 15px;
+  margin-left: 25px;
+
+}
+
+.piebottomtext{
+  margin-top: 30px;
+  margin-bottom: -5px;
+  margin-left: 25px;
+}
+
+/* End of Analytics Section*/
+
+/* Contacts Section*/
+
+.contacts-box{
+  grid-area: cont;
+  display:flex;
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  align-items: center;
+  padding-right: 40px;
+  justify-content: center;
 }
 /*contacts box grayscale on hovers*/
-
 .contacts-grayscaleone, .contacts-grayscaletwo {
   /*grayscale settings*/
     transition: filter .5s ease-in-out;
@@ -361,15 +755,7 @@
   filter: grayscale(100%); /* FF 35+ */
 }
 
-.contacts-box{
-  grid-area: cont;
-  display:flex;
-  border-right: 2px solid gray;
-  border-bottom: 2px solid gray;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
+  /*Ribbon Styling in Contact Boxes*/
 
 .left-ribbon{
   overflow: visible;
@@ -390,13 +776,16 @@
 
 }
 
+  /*Boxes Styling in Contacts Section*/
+
 .square-one, .square-two {
+  border-radius: 15px; 
   height: 213px;
   width: 260px;
   background-color: white;
   outline-style: solid;
   outline-color: #D9D9D9;
-  outline-width: 2px;
+  outline-width: 1px;
   display: flex;
   font-family: 'Myriad Pro';
   color:white;
@@ -404,10 +793,12 @@
 
 }
 
+  /*Green and Orange Avatar Styling in Contacts Section*/
+
 .greenavatar{
   overflow: visible;
   position: relative;
-  left:20%;
+  left:25%;
   bottom: 32%;
   height: 100px;
   width:85px;
@@ -417,12 +808,14 @@
 .orangeavatar{
   overflow: visible;
   position: relative;
-  left:20%;
+  left:25%;
   bottom: 32%;
   height: 100px;
   width:85px;
   z-index: 1;
 }
+
+  /*Blue Box within Contacts Box*/
 
 .blue-box{
   height:60px;
@@ -445,6 +838,8 @@
 
 }
 
+  /*Contact Section Text Styling*/
+
 .contact-two{
   font-family: 'Myriad Pro';
   font-size: 15px;
@@ -452,6 +847,7 @@
   justify-content: center;
 }
 
+  /*Contact Section Charts Styling*/
 .green-chart, .orange-chart{
   height: 80px;
   width: 240px;
@@ -460,11 +856,13 @@
   padding-top: 14px;
   justify-content: center;
 }
+  /*End of Contacts Section*/
 
+  /*Did you Know? Section*/
 .did-you-know{
   grid-area: did;
   display:flex;
-  border-right: 2px solid gray;
+  border-right: 1px solid #EEEEEE;
   justify-content: center;
   flex-direction: row;
   padding-top: 18px;
@@ -530,13 +928,15 @@
     display: flex;
     align-items: center;
 }
+  /*End of Did You Know? Styling*/
 
-/*end of main grid*/
 
+/*Blue Banner Styling*/
 .banner{
   grid-area: ban;
   background-color:#2498F4;
   display: flex;
+  flex-wrap:wrap;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
@@ -544,14 +944,23 @@
 
 .banner-photos{
     border-radius: 10px;
+    margin-top:10px;
+    width:340px;
+    height:190px;
+    z-index: 2;
     /*height:85%;
     width:27%;*/
 }
 
+/*Left ad position & styling (in blue banner)*/
+
 .left-bitmap{
   align-items: left;
   z-index: 2;
+  position: relative;
 }
+
+/*Creates a white box around the middle ad--> allows for the head to popout*/
 
 .white-box{
   z-index:1;
@@ -559,53 +968,285 @@
   position: relative;
   align-items: center;
   background-color: white;
-  height: 85%;
-  width: 27%;
+  height: 200px;
+  width: 340px;
   border-radius: 10px;
 
 }
+
+/*Center ad position & styling (in blue banner)*/
+
 .center-bitmap{
   align-items: center;
+  position:absolute;
   z-index: 2;
-  top:20px;
+  width:260px;
+  height:200px;
+  bottom:15px;
+  left:35px;
+
 }
+
+/*Right ad position & styling (in blue banner)*/
 
 .right-bitmap{
   align-items: right;
   z-index: 2;
-  left:-20px;
+  position: relative;
+
 }
 
+/*Sets white boxes to relative positioning*/
 
+.white-box-one, .white-box-three{
+  position: relative;
+}
 
+/*Text styling for first ad (left side)*/
+
+#ad-text-one{
+color:#33CC66;
+position: absolute;
+z-index: 3;
+font-size: 20px;
+margin-left: 230px;
+bottom:30%;
+font-family: 'Myriad Pro';
+}
+
+/*Text styling for first ad (left side)*/
+
+#ad-text-two{
+  color:gray;
+  position: absolute;
+  z-index: 3;
+  font-size: 13px;
+  margin-left: 205px;
+  bottom:23%;
+  font-family: 'Myriad Pro'
+
+}
+
+/*Text styling for second ad (center)*/
+
+#ad-text-three {
+  position: relative;
+  z-index: 3;
+  font-size: 17px;
+  background-color: #33CC66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Myriad Pro';
+  color:white;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+/*Text styling for third ad (left side)*/
+
+#ad-text-four{
+  color:#FE8F37;
+  position: absolute;
+  z-index: 3;
+  font-size: 25px;
+  margin-left: 20px;
+  bottom:30%;
+  font-family: 'Myriad Pro';
+
+}
+
+  /*Footer Styling*/
 .footer{
   grid-area: ft;
-  background-color:#f4f4f4;
+  background-color:#F6F6F6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color:gray;
+  font-family: 'Myriad Pro';
+  font-size: 13px;
+  padding-top: 5px;
+  padding-left: 15%;
+  padding-right: 15%;
 
 }
 
-@media screen and (max-width:767px){
-   .main{
-    grid-column:1/10; /*makes main full width*/
-
-
-  }
-
-  .icon-customersactive, .icon-dashboardactive, .icon-messagesactive,
-  .icon-promotionsactive,.icon-page-creatoractive,.icon-analyticsactive {
-    padding-left: 0px;
-  }
-
-  .site{
-    font-family: "Myriad Pro";
-    grid-template-columns: 1fr; /*makes everything full width*/
-    grid-template-areas:
-      'hd hd hd hd'
-      'left left left left'
-      'right right righ right'
-      'main main main main'
-      'ft ft ft ft' /*this section reorders the sections*/
-      grid-gap: 0.5em; //adds gaps between sections//
-  }
+.footer-text-short{
+  border-right: 1px solid #DDDDDD;
+  padding-right: 10px;
 }
+
+/*.footer-text-long{
+  border-right: 1px solid gray;
+  padding-right: 10px;
+  height:30px;
+  padding-top:-200px;
+}*/
+
+.blue-footer-icon{
+  height:75%;
+  width:3%;
+  margin-left: 40px;
+  margin-right: -170px;
+}
+
+.footer-img{
+  height:75%;
+  width:4%;
+  padding-top: 5px;
+}
+
+.footer-icon {
+height:50%;
+width:2%;
+padding-top: 10px;
+
+}
+
+.footer-div{
+  height:100%;
+  width: 1%;
+}
+
+
+/*Mobile Section Styling*/
+
+.mobile-section{
+  grid-area:mob;
+  display:none;
+}
+
+/*Adds an accordion for analytics section*/
+
+.accordion {
+    background-color: #2498F4;
+    color: white;
+    border-radius:10px;
+    cursor: pointer;
+    padding: 18px;
+    margin-left: 28%;
+    width: 30%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/*Automatically hides bar graph until accordion is selected*/
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+
+}
+
+  /*Mobile Styling with Media Queries--> Changes Grid to 1 column*/
+  @media only screen and (max-width: 767px) {
+
+    [class*="col-"] {
+       width: 10%;
+   }
+
+    .site{
+      display:flex; /*This should be grid, but it's not working :( */
+      flex-direction: column;
+      /*grid-gap:0.1em;*/
+      /*adds gap between items*/
+      grid-template-columns: 1fr; /*makes everything full width*/
+      grid-template-areas:
+      'hd'
+      'nv'
+      'spc'
+      'dash'
+      'ann'
+      'left'
+      'ana'
+      'cont'
+      'did'
+      'ban'
+       /*this reorders the sections*/
+    }
+
+    /*Adjusts view to suit mobile*/
+
+  .navbar{
+    margin-bottom:15px;
+  }
+
+  .navbar-icons{
+    padding-left: -100px;
+    padding-right: -100px;
+  }
+
+  .head-dashboard{
+    /*width:100%;*/
+    height:auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+  }
+
+  .announcements{
+    display:none;
+  }
+
+  .contacts-box{
+  display:none;
+  /*display:inline-block;
+  align-items: center;*/
+
+  }
+  .footer {
+    display: none;
+  }
+
+  .analytics{
+    display:none;
+  }
+
+  .did-you-know{
+    order:2;
+    margin-top: -100px;
+  }
+
+  .left-main{
+    order:2;
+  }
+
+  .banner{
+    order:2;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .mobile-section{
+    order:1;
+    grid-area:mob;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .mobile-section img{
+    width:80%;
+    height:auto;
+    align-self: center;
+  }
+  }
+
+
 }

@@ -12,18 +12,30 @@
     <meta name="keywords" content="HTML,CSS">
     <meta name="author" content="Joanna Williams">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   </head>
 
     <body class="site">
 
+        <!--Header-->
+
         <div class="header">
-          social stream
-           <a class="link-header" href="#">MINI of Raleigh</a>
+        <div class=left-header>social stream</div>
+        <div class="right-header">
+          <a class="link-header" href="#">MINI of Raleigh</a>
+          <a class="link-header" href="#"><img class="help-icon" src="img/icon-help.png" alt="Help Icon" /></a>
+          <a class="link-header" href="#"><img class="help-settings" src="img/icon-settings.png" alt="Settings Icon" /></a>
+        </div>
+
            <!--<img class="icon-spacer" src="img/spacer.jpg" alt="icon spacer"/>
            <img class="icon-help" src="../img/icon-help.jpg" alt="Help Icon"/>
            <img class="icon-spacer" src="img/spacer.jpg" alt="icon spacer"/>
            <img class="icon-settings" src="../img/icon-settings.jpg" alt="Settings Icon"/>-->
         </div>
+        <!--End of Header-->
+
+        <!--Navbar-->
+
         <div class="navbar">
           <div class="navbar-icons">
             <div class="icon-dashboard"></div>
@@ -49,14 +61,23 @@
             <img class="icon-shadow" src="img/icon-shadow.png" alt="Icon Shadow">
           </div>
         </div>
+        <!--End of Navbar-->
 
+        <!--Spacing Row-->
         <div class="space"></div>
 
+        <!--Head Dashboard-->
+
         <div class="head-dashboard">Dashboard
+
+          <!--Search Bar-->
           <form class="search-box">
             <input type="text" name="search">
             <img src="img/search.png" alt="Search icon" />
           </form>
+            <!--End Search Bar-->
+
+            <!--Head Dashboard Styling-->
             <style>
               input[type=text], select {
               width: 300px;
@@ -75,61 +96,177 @@
 
         <div class="white-space"></div>
 
+          <!--Announcements Section-->
+
         <div class="announcements">
           <div class="announcements-left">ANNOUNCEMENTS</div>
           <div class="announcements-middle">Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus </div>
-          <div class="announcements-right"></div>
+          <div class="announcements-right">
+              <img class="announcements-icon" href="#" src="img/announcementslefticon.png" alt="Left Arrow">&ensp;
+              <img class="announcements-icon" href="#" src="img/announcementsrighticon.png" alt="Right Arrow">
+          </div>
         </div>
+
+          <!--Left Side (Tasks & Recommendations)-->
+
           <div class="left-main">
+
+            <!--Tasks Section-->
+
             <div class="tasks">
+
+              <!--Task Header & Settings Icon-->
               <div class="task-one">
-                Tasks
+                &nbsp; Tasks
                 <img class="task-icon-setting" src="img/icon_settings.jpg" alt="Icon Settings">
               </div>
+
+                <!--#1 Welcome Contacts-->
+
               <div class="task-two">
                 <div class="circle-one"><p>1</p></div>
-                <p id="circlonetext">Welcome Contacts</p>
-                <div class="blueavatar-wrapper">
-                  <div class="content">
-                    <figure class="blueavatar">
-                      <img src="img/smallblueavatar.png">32
+                  <p class="blue-text">Welcome Contacts</p>
+                    <div class="content">
+                      <figure class="blueavatar">
+                        <img src="img/smallblueavatar.png"> 32
                     </figure>
                   </div>
-                </div>
               </div>
+
+                <!--#2 Provide Responses-->
+
               <div class="task-three">
                 <div class="circle-two"><p>2</p></div>
-                Provide Responses
-                <div class="blueavatar-wrapper">
+                  <p class="blue-text"> Provide Responses </p>
                   <figure class="blueavatar">
-                    <img src="img/smallblueavatar.png"><br />36
+                    <img src="img/smallblueavatar.png"> 36
                   </figure>
-                </div>
               </div>
+
+                <!--#3 Review Activity-->
+
               <div class="task-four">
                 <div class="circle-three"><p>3</p></div>
-                Review Activity
+                <p class="blue-text"> Review Activity </p>
                 <figure class="blueavatar">
-                  <img src="img/smallblueavatar.png">36
+                  <img src="img/smallblueavatar.png"> 36
                 </figure>
               </div>
+
+              <!--#4 Reach Out-->
+
               <div class="task-five">
                 <div class="circle-four"><p>4</p></div>
-                Reach Out
+                <p class="blue-text blue-text-reach"> Reach Out </p>
                 <figure class="blueavatar">
-                  <img src="img/smallblueavatar.png">3
+                  <img src="img/smallblueavatar.png"> &nbsp; 3
                 </figure>
               </div>
             </div>
-            <div class="recommendations">Recommendations
-            </div>
-          </div>
 
-            <div class="analytics">Analytics
-              <img class="bar-graph" src="img/bargraph.png" alt="Bar Graph"/>
-                <img class ="pie-graphs pietop" src="img/piecharttop.png" alt="Pie Chart"/>
-                  <img class ="pie-graphs piebottom" src="img/piechartbottom.png" alt="Pie Chart"/>
+              <!--Recommendations Section-->
+
+            <div class="recommendations"><p class="rec-head">Recommendations</p>
+
+              <div class="rec-one rec-box">&ensp;
+                <img class="articleicon rec-img" src="img/icon-article.png" alt="Article Icon">
+                  <div class="rec-alltext">
+                    <p class="rec-top-text">&emsp;Article</p>
+                    <p class="rec-bot-text">&ensp;7 Steps to getting more Fans</p>
+                  </div>
+              </div>
+
+              <div class="rec-two rec-box">&ensp;
+                <img class="articleicon rec-img" src="img/icon-article.png" alt="Article Icon">
+                  <div class="rec-alltext">
+                    <p class="rec-top-text">&emsp;Article</p>
+                    <p class="rec-bot-text">&ensp;Increase traction with more interactions</p>
+                  </div>
+              </div>
+
+              <div class="rec-three rec-box">&ensp;
+                <img class="checklisticon rec-img" src="img/icon-checklist.png" alt="Checklist Icon">
+                  <div class="rec-alltext">
+                    <p class="rec-top-text">&emsp;Article</p>
+                    <p class="rec-bot-text">&ensp;Creating a Promotion</p>
+                  </div>
+              </div>
+
+              <div class="rec-four rec-box">&ensp;
+                <img class="tipicon rec-img" src="img/icon-tip.png" alt="Tip Icon">
+                  <div class="rec-alltext">
+                    <p class="rec-top-text">&emsp;&ensp;Article</p>
+                    <p class="rec-bot-text">&ensp;&ensp;Share More</p>
+                  </div>
+              </div>
+
             </div>
+          </div> <!--End of Left Main-->
+
+          <!--Right Side of Main-->
+
+            <!--Analytics Section-->
+
+            <div class="analytics">
+              <div class="analytics-header">Analytics</div>
+
+              <div class="analytics-activity">
+                <div class="act-text"> ACTIVITY</div>
+                  <!--Dropdown Box-->
+                  <div class="dropdown act-text">
+                    <button class="dropbtn"><div class="dropdowntoptext">6/28/11 - 07/21/11</div><img class="orangedropdown" src="img/orangedropdown.png" alt="Drop Down Menu" /> </button>
+                    <div class="dropdown-content">
+                      <a href="#"> 07/21/11 - 08/14/11 </a>
+                      <a href="#"> 08/14/11 - 09/07/11 </a>
+                      <a href="#"> 09/07/11 - end of time </a>
+                    </div>
+                  </div>
+                    <!--End Dropdown Box-->
+              </div>
+
+              <div class="analytics-bargraph">
+                <img class="bar-graph" src="img/bargraph.png" alt="Bar Graph"/>
+              </div>
+              <div class="analytics-piechart">
+                <div class="piechart-text pietoptext"> CHANNELS</div>
+                <img class ="pie-graphs pietop" src="img/piecharttop.png" alt="Pie Chart"/>
+                <div class="piechart-text piebottomtext"> REFERRALS</div>
+                <img class ="pie-graphs piebottom" src="img/piechartbottom.png" alt="Pie Chart"/>
+              </div>
+              <div class="analytics-sprites">
+                <div class="checkbox">
+                  <input type="checkbox" id="checkbox_1">
+                  <label for="checkbox_1">
+                    <div class="facebook-icon">Facebook</div>
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <input type="checkbox" id="checkbox_2">
+                  <label for="checkbox_2">
+                    <div class="twitter-icon">Twitter</div>
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <input type="checkbox" id="checkbox_3">
+                  <label for="checkbox_3">
+                    <div class="foursquare-icon">Foursquare</div>
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <input type="checkbox" id="checkbox_4">
+                  <label for="checkbox_4">
+                    <div class="google-icon">Google+</div>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+              <!--Contacts Box-->
+
             <div class="contacts-box">
               <!--<div class="contacts-grayscaleone">-->
                 <img class="greenavatar" src="img/greenavatar.png" alt="Green Avatar" />
@@ -158,6 +295,8 @@
             <!--  </div>-->
             </div>
 
+            <!--Did you Know? Box-->
+
             <div class="did-you-know">
               <div class="rectangle">
                 <div class="left-circle">
@@ -173,19 +312,71 @@
             </div>
           </div>
 
+        <!--Blue Banner-->
+
         <div class="banner">
-            <div class="white-box">
+            <div class="white-box-one">
               <img class="left-bitmap banner-photos" src="img/bitmapgreen.jpg" alt="Green Bitmap">
+              <p id="ad-text-one">Watch what <br />you say.</p>
+              <p id="ad-text-two">Message Management</p>
             </div>
             <div class="white-box">
-              <img class="center-bitmap banner-photos" src="img/bitmap.png" alt="People Bitmap">
+              <img class="center-bitmap" src="img/bitmap.png" alt="People Bitmap">
+                <p id="ad-text-three">See what others are doing with us.</p>
             </div>
-            <div class="white-box">
+            <div class="white-box-three">
+              <p id="ad-text-four">Version 2.0 <br />is coming</p>
               <img class="right-bitmap banner-photos" src="img/compositepath.jpg" alt="Composite Bitmap">
             </div>
          </div>
-        <div class="footer">FOOTER</div>
 
+        <!--Footer-->
+
+        <div class="footer">
+          <p class="footer-text-short">Tutorials</p>
+          <p class="footer-text-short">Support</p>
+          <p class="footer-text-long">Blog</p>
+          <img class="footer-div" src="img/footerdivider.png" alt="Footer Divider"/>
+          <p class="footer-text-long"><p><span style="color: #2498F2"><strong>Ariel Winter</strong></span> likes your <span style="color: #2498F2"><strong>Win A Cooper</strong></span> Sweepstakes Promotion
+            <img class="blue-footer-icon" src="img/bluefootericon.png" alt="Blue Arrow Icon"/></p>
+            <img class="footer-div" src="img/footerdivider.png" alt="Footer Divider"/>
+          <img class="footer-img" src="img/footerimg.png" alt="Footer Image"/>
+          <p><span style="color: #2498F2"><strong>Logout</strong></span></p>
+          <img class="footer-div" src="img/footerdivider.png" alt="Footer Divider"/>
+          <img class="footer-icon" src="img/footericonone.png" alt="Footer Icon"/>
+          <img class="footer-icon" src="img/footericontwo.png" alt="Footer Icon"/>
+          <img class="footer-icon" src="img/footericonthree.png" alt="Footer Icon"/>
+          <img class="footer-icon" src="img/footericonfour.png" alt="Footer Icon"/>
+          <img class="footer-div" src="img/footerdivider.png" alt="Footer Divider"/>
+        </div>
+
+
+      <!--Mobile Section (Accordion) -> Not shown in Desktop Version-->
+
+<div class="mobile-section">
+  <button class="accordion">Analytics</button>
+<div class="panel">
+  <p><img class="bar-graph" src="img/bargraph.png" alt="Bar Graph"/></p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
+</div>
     </body>
 
 </html>
